@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import MapLeaft from "./components/MapLeaft";
+import Navbar from "./components/Navbar";
+import "./App.css";
+import { useState } from "react";
 function App() {
+  const [ubication, setUbication] = useState([19.4356, -99.1413]);
+  const clickUbicarme = () => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log(position.coords.latitude);
+      console.log(position.coords.longitude);
+      setUbication([position.coords.latitude, position.coords.longitude]);
+    });
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Navbar />
+      <MapLeaft mapCenter={ubication} />
+      <div class="toolbar">
+        <button
+          onClick={() => {
+            clickUbicarme();
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <img
+            src="/ubicacion.svg"
+            className="img-button"
+            alt="ubicacion icono"
+          />
+        </button>
+      </div>
     </div>
   );
 }
