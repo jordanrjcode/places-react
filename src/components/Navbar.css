@@ -1,8 +1,38 @@
-nav {
+.nav {
   color: white;
   background-color: var(--bg-color-1);
   width: 100%;
   height: 100px;
   position: absolute;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.nav__brand {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.nav__search {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+.nav__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.nav__search > img {
+  width: 18px;
+  cursor: pointer;
+}
+.nav__input::placeholder {
+  color: white;
 }

@@ -1,3 +1,5 @@
+@import url("https://unpkg.com/leaflet@1.5.1/dist/leaflet.css");
+
 :root {
   --bg-color-1: #564787;
   --bg-color-2: #dbcbd8;
@@ -12,6 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
 }
 
 code {
