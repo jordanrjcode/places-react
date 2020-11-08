@@ -9,7 +9,7 @@ const MapLeaft = ({ mapCenter }) => {
       // map.setView(mapCenter, 15);
       map.flyTo(mapCenter, map.getZoom()); //animacion
     }
-  }, [mapCenter]);
+  }, [map, mapCenter]);
   return (
     <div className="map">
       <MapContainer

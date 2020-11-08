@@ -7,7 +7,6 @@ const Navbar = () => {
         <input type="text" placeholder="Buscar lugar" className="nav__input" />
         <img src="buscar.svg" className="search-icon" alt="Buscar icono" />
       </div>
-      <div className="nav__icons"></div>
     </nav>
   );
 };
